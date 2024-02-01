@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables-2</title>
+</head>
+<body>
+    <script>
+
+        let name="Selma";        /* is Not a Number */
+        console.log(name, typeof(name),isNaN(name)) //Selma string true
+
+        var num= 234;
+        console.log(num,typeof num, isNaN(num)) //234 'number' false
+
+        const bigNumber=123n;
+        /*console.log(bigNumber, typeof(bigNumber))
+        isNaN(bigNumber)) //123n 'bigint' 06-variables-2.html:18 Uncaught TypeError: Cannot convert a BigInt value to a number
+    at isNaN (<anonymous>)
+    at 06-variables-2.html:18:50 */
+
+
+        let esitMi=false;
+        console.log(esitMi, typeof esitMi, isNaN(esitMi))//false 'boolean' false
+
+        let symbol1=Symbol();
+        console.log(symbol1, typeof symbol1)//Symbol() 'symbol'
+
+        var surName;
+        console.log(surName, typeof surName, isNaN(surName))//undefined 'undefined'  true
+
+        let isim= null;
+        console.log(isim, typeof isim, isNaN(isim))//null 'object' false
+
+        let arr = ["selma", "leyla", "cevdet"];
+            console.log(arr, typeof arr,isNaN(arr)); //(3) ['selma', 'leyla', 'cevdet'] 'object'
+            const obj = {
+                name: "Selma",
+                surName: "Bayat",
+                age: 23,
+            };
+            console.log(obj, typeof obj,isNaN(obj)); // {name: 'Selma', surName: 'Bayat', age: 23}  'object'
+            let bolme = 34 / 0;
+            console.log(bolme,typeof(bolme),isNaN(bolme)); //Infinity 'number' 
+
+
+
+    </script>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rakamlar Toplami</title>
+</head>
+<body>
+    <script>
+        let sayi=123;
+        let rakamlar_Toplami=0;
+
+        let birler = sayi%10
+        console.log("birler " + birler);
+        rakamlar_Toplami+=birler;
+
+        let onlar= sayi/10;
+        console.log("onlar " + onlar%10);
+        rakamlar_Toplami+=onlar;
+
+        let yuzler = sayi/100;
+        console.log("yuzler " + yuzler)
+        rakamlar_Toplami+=yuzler;
+
+        console.log(rakamlar_Toplami);
+        console.log(Math.floor(rakamlar_Toplami));
+        console.log(Math.ceil(rakamlar_Toplami)); //yukarıya yuvarlama
+        
+
+
+
+
+    </script>
+
+    
+</body>
+</html>
