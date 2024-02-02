@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Value-Reference Types</title>
+</head>
+<body>
+    <script>
+        let x=10;
+
+        let y=x;
+        console.log(y);
+        console.log(x==y);
+
+        y=15;
+        console.log(x);
+        console.log(y);
+        console.log(x==y);
+
+        //reference type
+
+        const car1={marka:"mercedes", model:"A180"}
+        car2=car1;
+        console.log(car1);
+        console.log(car2);
+        console.log(car1===car2);
+        console.log(car1===car2);
+        car2.marka="BMW";
+
+        console.log(car1);
+        console.log(car2);
+
+        console.log([]==[]); //birbirine eşit değildir çünkü referans tipleri farklıdır
+
+        console.log(10==10); //true olur çünkü değerleri eşit
+
+        
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
