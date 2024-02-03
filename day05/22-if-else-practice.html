@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>If Else Practice</title>
+    </head>
+    <body style="margin:2rem">
+<input type="number" id="inp" placeholder="Urun tutarini giriniz">
+<button type="button" onclick="hesapla()">Hesapla</button>
+<h2 class="result"></h2>
+        <script>
+            function hesapla(){
+                let inputEl= document.querySelector("#inp");
+                let inputElValue=Number(inputEl.value)
+                //console.log(inputElValue,typeof(inputElValue))
+                if(inputElValue>500){
+                    inputElValue*=0.90;
+                }else{
+                    inputElValue*=0.95;
+                }
+document.querySelector(".result").innerHTML=` Toplam odemeniz gereken tutar: ${inputElValue.toFixed(2)} TL'dir`
+                /* let sonucEl=document.querySelector(".result")
+                sonucEl.innerHTML=` Toplam odemeniz gereken tutar: ${inputElValue} TL'dir`
+ */
+inputEl.value=""
+            }
+            
+        </script>
+    </body>
+</html>
