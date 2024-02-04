@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Practice</title>
+    </head>
+    <body style="margin: 2rem">
+        <input type="number" id="inp" placeholder="Urun tutarini giriniz" />
+        <button onclick="hesapla()">Hesapla</button>
+        <h3 class="result"></h3>
+        <script>
+            /* Bir Textbox tan alınan fiyat bilgisi 500 den büyükse %10 
+        indirim uygulayıp sonucu yazan, 300 den büyükse %7 indirip uygulayıp sonucu yazan, 
+        değilse %5 indirip uygulayıp sonucu yazan programı yapınız.    */
+            function hesapla() {
+                let inpEl = document.querySelector("#inp");
+                let inpValue = Number(inpEl.value);
+                if(inpValue>500){
+                    inpValue*=0.90;
+                }else if(inpValue>300){
+                    inpValue*=0.93;
+                }else{
+                    inpValue*=0.95;
+                }
+                document.querySelector(".result").innerHTML=`Toplam odemeniz gereken tutar: ${inpValue.toFixed(2)} Tldir  `
+                inpEl.value="";
+            }
+        </script>
+    </body>
+</html>

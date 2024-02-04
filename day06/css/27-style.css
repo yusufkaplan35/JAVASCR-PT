@@ -1,0 +1,28 @@
+.toggle-btn{
+    background-color: black;
+    color: antiquewhite;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    cursor: pointer;
+}
+.toggle-btn:hover{
+    background-color: rgb(157, 135, 10);
+}
+.dark{
+    background-color: black;
+    color: white;
+}
+.dark .toggle-btn{
+    background-color: white;
+    color: black;
+}
+h1{
+    text-align: center;
+}
