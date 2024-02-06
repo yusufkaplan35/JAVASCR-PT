@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eval</title>
+</head>
+<body>
+    <input type="text" id="inp">
+    <button onclick="hesapla()">Hesapla</button>
+    <h2 class="result"></h2>
+    <script>
+function hesapla(){
+    let inpEl=document.querySelector("#inp")
+   let number= inp.value
+   let sonuc=eval(number)
+   document.querySelector(".result").innerHTML=`isleminizin sonucu:  ${sonuc} `
+}
+let x=4;
+let y=5;
+let sonuc="console.log(x+y)"
+console.log(eval(sonuc))
+ 
+    </script>
+</body>
+</html>
