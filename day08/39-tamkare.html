@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Practice</title>
+    </head>
+    <body>
+        <input type="number" id="inp" placeholder="sayi giriniz" />
+        <button onclick="tamkareBul()">Hesapla</button>
+        <h3 class="result"></h3>
+        <script>
+            function tamkareBul() {
+                let inputEl = document.querySelector("#inp");
+                let number = Number(inputEl.value);
+                let resultEl = document.querySelector(".result");
+                let karekok = 1;
+                do {
+                    if (karekok * karekok == number) {
+                        resultEl.innerHTML = `Girdiginiz sayi ${number} tamkaredir ve karekok degeri ${karekok}`;
+                        console.log("tamkare ");
+                    } else {
+                        resultEl.innerHTML = `Girdiginiz sayi ${number} tamkare degildir`;
+                        console.log("tamkare degildir");
+                    }
+                    karekok++;
+                } while (karekok ** 2 <= number);
+            }
+        </script>
+    </body>
+</html>

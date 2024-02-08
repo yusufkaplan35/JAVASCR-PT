@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Prime Number</title>
+    </head>
+    <body>
+        <input type="number" id="inp" placeholder="sayi giriniz" />
+        <button onclick="isPrimeNumber()">Hesapla</button>
+        <h3 class="result"></h3>
+        <script>
+            function findPrimeNumber(num) {
+                if (num < 2) {
+                    return false;
+                }
+                let flag = true;
+                for (let i = 2; i < num; i++) {
+                    if (num % i == 0) {
+                        flag=false;
+                        break;
+                    }
+                }
+                return flag;
+            }
+            function isPrimeNumber() {
+                let inputEl = document.querySelector("#inp");
+                let number = Number(inputEl.value);
+                let resultEl = document.querySelector(".result");
+         let result=  findPrimeNumber(number) 
+         if(result){
+            resultEl.innerHTML=`Girdiginiz sayi ${number} asal sayidir`
+         }else{
+            resultEl.innerHTML=`Girdiginiz sayi ${number} asal sayi degildir`
+         }
+         inputEl.value=""
+            }
+        </script>
+    </body>
+</html>

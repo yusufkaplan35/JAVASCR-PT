@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let currentYear = 2024;
+            let birthYear = 1990;
+            /*         function yasHesapla(){
+            console.log(`Benim yasim: ${currentYear - birthYear}`)
+        } */
+            /*     function yasHesapla(birthYear){
+            console.log("Benim yasim : "+(currentYear-birthYear))
+            
+        } */
+            function yasHesapla(birthYear) {
+                let date = new Date();
+                let year = date.getFullYear();
+                return year-birthYear; 
+            }
+        
+            console.log(yasHesapla(1964));
+        </script>
+    </body>
+</html>

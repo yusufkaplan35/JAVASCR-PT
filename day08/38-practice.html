@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Practice</title>
+    </head>
+    <body>
+        <input type="number" id="inp" placeholder="sayi giriniz" />
+        <button onclick="faktoriyelHesapla()">Faktoriyel</button>
+        <h3 class="result"></h3>
+        <script>
+            function faktoriyelHesapla() {
+                let inputEl = document.querySelector("#inp");
+                let number = Number(inputEl.value);
+                let resultEl = document.querySelector(".result");
+                
+                if (number < 0 || !Number.isInteger(number)) {
+                    alert("Lutfen pozitif bir sayi giriniz");
+                    inputEl.value = "";
+                    inputEl.focus();
+                    return;
+                }
+                
+                let faktoriyel = 1;
+                do {
+                    faktoriyel *= number;
+                    number--;
+                } while (number > 1);
+                resultEl.innerHTML = `Islemin sonucu : ${faktoriyel}`;
+            }
+        </script>
+    </body>
+</html>
