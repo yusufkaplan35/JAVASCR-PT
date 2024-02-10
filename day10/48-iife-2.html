@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIFE-2</title>
+</head>
+<body>
+<script>
+(function(name){
+    let days=["pazar","pazartesi","sali","carsamba","persembe","cuma","cumartesi"];
+   // console.log(days);
+   let today= new Date()
+   let message=`Merhaba ${name} bugun gunlerden ${days[today.getDay()]}  sayfama hosgeldiniz `
+   alert(message)
+})("ayse")
+</script>
+    
+</body>
+</html>

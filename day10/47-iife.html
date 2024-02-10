@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iife</title>
+</head>
+<body>
+    
+    <script>
+/* (function(a,b){
+    console.log("hello js im immediately invoked function expression")
+    let sonuc=a+b;
+    console.log(sonuc)
+  
+})(4,5) */
+/* const first = () => { 
+    console.log("hello")
+ }
+ first() */
+/*  (()=>{
+    console.log("hello im immediately invoked function expression")
+ })() */
+    /*!
+      IIFE yöntemi, büyük projelerde birden fazla harici JS dosyasının eklendiği durumlarda
+      her bir dosyadaki değişken ve fonksiyonların birbiri ile karışmasını engellemek için kullanılır
+      Her bir dosyadaki kodlar IIFE içine alınarak bir scope oluşturulup ve değişkenler ile fonksiyonların
+      yaşam alanları belirlenmiş olur
+   */
+/*    let x="hello"
+   let x="hello" */
+   (()=>{
+    let name="Ali";
+    console.log(name)
+    let z=12;
+    })()
+    </script>
+    <script src="./js/47-1.script.js"></script>
+    <script src="./js/47-2.script.js"></script>
+</body>
+</html>
