@@ -1,54 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Handling</title>
-    <style>
-        .btn-hello {
-            background-color: red;
-            padding: 15px;
-            font-size: 20px;
-            font-weight: bold;
-            color: white;
-            cursor: pointer;
-        }
-        .btn-hallo {
-            background-color: rgb(0, 30, 255);
-            padding: 15px;
-            font-size: 20px;
-            font-weight: bold;
-            color: white;
-            cursor: pointer;
-        }
-        .btn-zdravo {
-            background-color: rgb(11, 122, 30);
-            padding: 15px;
-            font-size: 20px;
-            font-weight: bold;
-            color: white;
-            cursor: pointer;
-        }
-    </style>
-</head>
-<body style="margin: 2rem">
-
-    <button onclick="hello()" class="btn-hello" >Hello</button>
-    <button class="btn-hallo" >Hallo</button>
-    <button class="btn-zdravo" >Здраво</button>
-
-    <script>
-
-//1.yontem
-const hello = () => console.log("Hello 1.yontem");
-
-//2.yontem
-const hallo = () => console.log("Hallo 2.yontem");
-/* let btn= document.querySelector(".btn-hallo");
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Event Handling</title>
+        <style>
+            .btn-hello {
+                background-color: red;
+                padding: 15px;
+                font-size: 20px;
+                font-weight: bold;
+                color: white;
+                cursor: pointer;
+            }
+            .btn-hallo {
+                background-color: rgb(0, 30, 255);
+                padding: 15px;
+                font-size: 20px;
+                font-weight: bold;
+                color: white;
+                cursor: pointer;
+            }
+            .btn-zdravo {
+                background-color: rgb(11, 122, 30);
+                padding: 15px;
+                font-size: 20px;
+                font-weight: bold;
+                color: white;
+                cursor: pointer;
+            }
+            .btn-salut {
+                background-color: rgb(122, 11, 107);
+                padding: 15px;
+                font-size: 20px;
+                font-weight: bold;
+                color: white;
+                cursor: pointer;
+            }
+            .btn-privet {
+                background-color: rgb(122, 35, 11);
+                padding: 15px;
+                font-size: 20px;
+                font-weight: bold;
+                color: white;
+                cursor: pointer;
+            }
+            .btn-ciao {
+                background-color: gold;
+                padding: 15px;
+                font-size: 20px;
+                font-weight: bold;
+                color: white;
+                cursor: pointer;
+            }
+            .btn-dark {
+                background-color: black;
+            }
+        </style>
+    </head>
+    <body style="margin: 2rem">
+        <button onclick="hello()" class="btn-hello">Hello</button>
+        <button class="btn-hallo">Hallo</button>
+        <button class="btn-zdravo">Здраво</button>
+        <button class="btn-salut">Salut</button>
+        <button class="btn-privet">Privet</button>
+        <button class="btn-ciao">Ciao</button>
+        <script>
+            //1.yontem
+            const hello = () => console.log("Hello 1.yontem");
+            //2.yomtem
+            const hallo = () => console.log("Hallo 2.yontem");
+            /* let btn= document.querySelector(".btn-hallo");
 btn.onclick=hallo(); */
-document.querySelector(".btn-hallo").onclick=hallo;
-
-
-    </script>
-</body>
+            document.querySelector(".btn-hallo").onclick = hallo;
+            //3.yontem
+            document
+                .querySelector(".btn-zdravo")
+                .addEventListener("click", function () {
+                    console.log("Hello 3.yontem");
+                    const topla = (a, b) => {
+                        return console.log(a + b);
+                    };
+                    topla(6, 7);
+                });
+            //4-yontem
+            let btn = document.querySelector(".btn-salut");
+            btn.addEventListener("click", () => {
+                console.log("Hello 4.yontem");
+                const strUpperCase = (str) => str.toUpperCase();
+                console.log(strUpperCase("hello"));
+                console.log(strLowerCase("HELLO"));
+            });
+            const strLowerCase = (str) => str.toLowerCase();
+            document
+                .querySelector(".btn-privet")
+                .addEventListener("mouseenter", () => {
+                    document.querySelector(".btn-privet").style.background =
+                        "gold";
+                });
+            document
+                .querySelector(".btn-ciao")
+                .addEventListener("mouseover", () => {
+                    document
+                        .querySelector(".btn-ciao")
+                        .classList.add("btn-dark");
+                });
+        </script>
+    </body>
 </html>
