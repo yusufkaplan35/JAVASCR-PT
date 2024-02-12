@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Scope</title>
+    </head>
+    <body>
+        <script>
+            let globalScope = "global scope";
+            const sentence = "Hello World";
+            //function scope
+            const sayHello = () => {
+                let letter = "a";
+                console.log(letter);
+                console.log(globalScope);
+                console.log(sentence);
+            };
+            //console.log(letter)
+            console.log(globalScope);
+            let letter = "c";
+            sayHello();
+            function sayHi() {
+                console.log("hi");
+                let letter = "b";
+                let x = 10;
+                if (x == 10) {
+                    let number = 20;
+                   var z="Elmas"; 
+                }
+                //console.log(number)
+                console.log(z)
+            }
+            //block scope icindeki var degiskeni kendini bir ust scope yerlestirir
+          
+            sayHi()
+        </script>
+    </body>
+</html>

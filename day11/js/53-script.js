@@ -17,7 +17,7 @@ for (let i = 0; i< carKeys.length; i++) {
 }
 selectFormEl.innerHTML=strSelectForm
 }
-document.getElementById("formSelect").addEventListener("",(e)=>{
+document.getElementById("formSelect").addEventListener("click",(e)=>{
   let carValue= e.target.value;
   document.getElementById("result").innerHTML=car[carValue]
 })

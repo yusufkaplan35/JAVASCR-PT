@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Practice-2</title>
+    </head>
+    <body>
+
+        <script>
+
+            const fiyatlar = [123, 34, 7, 67, 80, 35, 56, 66, 126, 67];
+            const setPrice = (arr, rate) => {
+                if (!Array.isArray(arr) || arr.length <= 0) {
+                    return;
+                }
+                for (let i = 0; i < arr.length; i++) {
+                    arr[i]= arr[i] + arr[i]*rate/100;
+                }
+                return arr;
+            };
+            console.log(setPrice(fiyatlar,100));
+            
+        </script>
+    </body>
+</html>

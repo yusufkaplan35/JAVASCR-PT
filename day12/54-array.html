@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Array</title>
+    </head>
+    <body>
+        <script>
+            
+            //1.yontem
+            let dersler = ["html", "css", "javascript", "java", "c#", "python", "php", "c++"];
+            console.log(dersler);
+
+            //length
+            console.log(dersler.length)
+
+            //belli bir indexi gostermek icin
+            console.log(dersler[2])//javascript
+            console.log(dersler[0])//html
+            console.log(dersler[dersler.length-1])//c++
+
+            //arraydeki elemanli degistirmek
+            dersler[0]="Go Lang"
+            console.log(dersler[1]="Mojo");
+            console.log(dersler);
+
+            //2. yontem
+           const numbers= new Array(45,78,21,98,34);
+           console.log(numbers.length)
+           const fruits=["apple","banana","orange","mango"];
+           fruits[1]="grape";
+           console.log(fruits)
+           
+           fruits [3]="elma";
+      //  fruits=["Ali","Veli"];
+
+           let arr1=[];
+           let arr2=[];
+           console.log(arr1==arr2)
+           let arr=[1,2,3,4,5,6,7,8,9,10];
+          arr[33]=34;
+           console.log(arr)
+       
+        </script>
+    </body>
+</html>

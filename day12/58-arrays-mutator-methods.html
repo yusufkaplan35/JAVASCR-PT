@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Array Mutator Methods</title>
+    </head>
+    <body>
+
+        <script>
+
+            let cars = [
+                "Bmw",
+                "Audi",
+                "Mercedes",
+                "Fiat",
+                "Opel",
+                "Volkswagen",
+                "Renault",
+                "Nissan",
+                "Mazda",
+                "Peugeot",
+            ];
+
+            console.log(cars);
+            //push()==>sona eleman ekler eklenen arrayin lengthini return eder
+            console.log(cars.push("Bugatti"));
+            console.log(cars);
+
+            //pop()==>sondaki elemani siler ve silinen elemanı return eder
+            console.log(cars.pop())
+            console.log(cars);
+
+            //shift()==>ilk elemani siler ve silinen elemanı return eder
+            console.log(cars.shift())
+            console.log(cars);
+
+            //unshift()==>basa eleman ekler eklenilen arrayin lengthini return eder
+            console.log(cars.unshift("Bugatti"))
+            console.log(cars);
+
+            //sort()==>arrayin elemanlarını alfabetik olarak sıralar ve sıralanmıs halini return eder
+            console.log(cars.sort())
+            console.log(cars)
+
+            //reverse()==>arrayin elemanlarını ters sıralar ve ters sıralanmıs halini return eder
+            console.log(cars.reverse())
+            console.log(cars)
+            
+        </script>
+    </body>
+</html>
