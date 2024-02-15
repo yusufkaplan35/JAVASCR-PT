@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mutator-2</title>
+</head>
+<body>
+    <script>
+//spice methodu: ==> bir arraye eleman eklemek ve silmek icin kullanilir
+let hayvanlar=[
+    "kedi",
+    "kopek",
+    "tavuk",
+    "kus",
+    "koyun",
+    "ayı",
+    "ordek"
+]
+// start index , deleteCount , item 1 , item 2  
+console.log(hayvanlar)
+console.log(hayvanlar.splice(2,0,"hamsi"))
+console.log(hayvanlar)
+console.log(hayvanlar.splice(3,3))
+console.log(hayvanlar)
+//splice methodu baslangic indeksinden  baslayarak belirtilen sayida
+// eleman siler ve silinen elemanlari bize dondurur
+//eger ki eleman silmek istemioyorsak delete count kismina 0 vermeliyiz aksi takdirde
+// o vermzssek onun yerine herhangi bir sayi yazdigimizda yazilan sayi adedince
+//arrayin elemanlarini siler     
+//=====>ilk eleman yanına 0 yazınca ekler 1 den itibaren yazılan sayılarda siler
+    </script>
+</body>
+</html>

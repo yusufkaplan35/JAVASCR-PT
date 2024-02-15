@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>For-in</title>
+    </head>
+    <body>
+        <script>
+            //for in--> arrayi gezer ve bize indexi dondurur
+            /* 
+let meyveler=["elma","armut","muz","kivi"];
+for(let w in meyveler){
+    console.log(w)
+} */
+
+/*
+Soru
+İki ayrı dizideki eşleşen indis elemanları birleştirerek ayrı bir dizide 
+ saklayan uygulamayı FOR IN ile yazınız.
+*/
+            let isimler = [
+                "Aysun",
+                "Beril",
+                "Gamze",
+                "Canan",
+                "Hulya",
+                "Alparslan",
+            ];
+            let soyIsimler = [
+                "Kaya",
+                "Koc",
+                "Yildirim",
+                "kara",
+                "Yavuz",
+                "Bozkurt",
+            ];
+            const birlestir = (adlar, soyadlar) => {
+                let adSoyadlar = [];
+                for (let w in soyadlar) {
+                    // adSoyadlar.push(`${adlar[w]} ${soyadlar[w]}`)
+                    adSoyadlar[w] = `${adlar[w]} ${soyadlar[w]}`;
+                }
+                return adSoyadlar;
+            };
+            console.log(birlestir(isimler, soyIsimler));
+        </script>
+    </body>
+</html>

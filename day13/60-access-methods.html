@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Access Methods</title>
+    </head>
+    <body>
+        <script>
+            let names = [
+                "john",
+                "Mary",
+                "Peter",
+                "Jane",
+                "Mark",
+                "Paul",
+                "James",
+                "Thomas",
+            ];
+            //concat() ==> bir dizi ile baska bir dziyi birlestirmek icin kullanilir
+            // bir dizi ile bir elemani birlestirmek icin kullanilir
+            //bize yeni bir array dondurur, mevcut dizi bozulmaz
+            const newNames = names.concat(["Ahmet", "Mehmet"]);
+            console.log(names);
+            console.log(newNames);
+            const isimler = [
+                "Aysun",
+                "Beril",
+                "Gamze",
+                "Canan",
+                "Canan",
+                "Canan",
+            ];
+            const yeniIsimler = names.concat(isimler);
+            console.log(yeniIsimler);
+            console.log(names);
+
+            //includes() ==> bir dizide belirli bir elemanin olup olmadigini sorgulamak icin kullanilir
+            //ilgili elamqan arrayde varsa true dondurur yoksa false dondurur
+            console.log(isimler.includes("Canan")); //true
+            console.log(isimler.includes("Can")); //false
+             
+            //indexOf() ==> bir dizide belirli bir elemanin indexini bulmak icin kullanilir
+            //olmayan bir elemanin indexi -1 dondurur
+            console.log(isimler.indexOf("Canan"));//3
+            console.log(isimler.indexOf("Baris"));//-1
+
+            //lastIndexOf() ==> bir dizide belirli bir elemanin son indexini bulmak icin kullanilir
+            //olmayan bir elemanin indexi -1 dondurur
+            console.log(isimler.lastIndexOf("Canan"));//5
+            console.log(isimler.lastIndexOf("Bayram"));//-1
+            //join() ==> bir dizi elemanlarini belirli bir ayrac
+            // karakteri ile birlestirmek icin kullanilir bize bir string dondurur
+            let strIsimler = isimler.join("-");
+            console.log(strIsimler.length);
+            console.log(strIsimler, typeof strIsimler);
+
+            //toString() ==> bir dizi elemanlarini stringe cevirir
+            let animals = ["cat", "dog", "rabbit", "bird", "fish"];
+            let strAnimals = animals.toString();
+            console.log(strAnimals, typeof strAnimals);
+
+            //slice() ==> bir dizi elemanlarinin baslangic indexinden baslayip bitis indexine kadarki kisimlarini
+            //kopyalayarak bize yeni bir array dondurur
+            let animals2 = ["cat", "dog", "rabbit", "bird", "fish"];
+            //-den -a|e kadar 
+            let strAnimals2 = animals2.slice(1, 3);
+            console.log(strAnimals2);
+            console.log(animals2);
+        </script>
+    </body>
+</html>
