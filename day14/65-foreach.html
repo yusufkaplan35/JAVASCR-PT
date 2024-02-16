@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Foreach</title>
+    </head>
+    <body>
+        <script>
+            let flowers = [
+                "rose",
+                "lily",
+                "tulip",
+                "sunflower",
+                "jasmine",
+                "orchid",
+            ];
+        //    flowers.forEach((flower,index)=>console.log(flower+" "+index))
+        flowers.forEach((flower,index)=>{
+            console.log(flower.toUpperCase()+" "+index)
+        })
+        let fishes=[
+            "shark",
+            "whale",
+            "dolphin",
+            "crab",
+            "octopus",
+            "crayfish",
+            "hamsi fish"
+        ]
+        let newFishes=[];
+        fishes.forEach((fish)=>newFishes.push(fish.toUpperCase().substring(0,3)))
+        console.log(newFishes)
+console.log("********************************************************************************")
+/*
+Belirtilen dizinin her bir elamanının 5 katını alarak ayrı bir dizide 
+ saklayan uygulamayı forEach() metodu ile yazınız.
+*/
+const dizi = [-5, 24, -13, 7];
+const yeniDizi = [];
+dizi.forEach((number,index)=>{
+   //yeniDizi[index]=number*5; 
+   yeniDizi.push(number*5)
+})
+console.log(yeniDizi)
+        </script>
+    </body>
+</html>

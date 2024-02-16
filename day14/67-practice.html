@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<body>
+    <script>
+/*
+tlFiyatlar dizisindeki fiyatların Euro ve dolar karşılıklarını 
+ hesaplatarak yeni dizlere kaydediniz.
+*/
+const euro = 33.45;
+const dolar = 31.25;
+const tlFiyatlar = [10000, 150000, 15000, 50000, 8000000];
+
+ let euroFiyatlar = tlFiyatlar.map((ucret)=>(ucret/euro).toFixed(2))
+ let dolarFiyatlar = tlFiyatlar.map((fiyat)=>(fiyat/dolar).toFixed(2))
+ console.log(euroFiyatlar)
+ console.log(dolarFiyatlar)
+ 
+ </script>

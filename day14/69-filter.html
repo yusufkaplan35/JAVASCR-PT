@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+</head>
+<body>
+    
+    <script>
+const koordinatlar = [-100, 150, -32, 43, -20];
+  let negativeCoordinates = koordinatlar.filter((koordinat)=> koordinat<0 )
+  console.log(negativeCoordinates)
+  console.log("---------------------------------------------------------")
+  let filmler = [
+                "Scare face",
+                "Inception",
+                "Interstellar",
+                "The Matrix",
+                "The Prestige",
+                "The Departed",
+                "The Wolf of Wall Street",
+                "Avengers",
+                "Hamsi firarda",
+            ];
+           const  filteredFilms= (letter) => { 
+         const hFilteredFilms =  filmler.filter((film)=>film.startsWith(letter))
+         return hFilteredFilms
+            } 
+console.log(filteredFilms("H"))
+console.log(filteredFilms("S"))
+console.log(filteredFilms("A"))
+    </script>
+</body>
+</html>

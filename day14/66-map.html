@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            /* 
+        forEach() yöntemi, bir array deki her öğe için sağlanan bir işlevi çağırır
+         ve hiçbir şey döndürmez. Bu yöntem, dizi öğelerinin değerlerini değiştirebilir 
+         (mutate).for each arrayindaki her elaman icin her seferinde fonksiyonu cagirarak
+          calistiriliyor bu isleme call back denilir
+        
+    map() yöntemi, bir arraydeki her öğe için sağlanan bir işlevi çağırır
+     ve işlevin sonuçlarıyla yeni bir array oluşturur. Bu yöntem, orijinal
+      arrayi değiştirmez (immutable).
+ */
+            let filmler = [
+                "Scare face",
+                "Inception",
+                "Interstellar",
+                "The Matrix",
+                "The Prestige",
+                "The Departed",
+                "The Wolf of Wall Street",
+                "Avengers",
+                "Hamsi firarda",
+            ];
+            let newArr = filmler.map((film, index) =>
+                film.toUpperCase().charAt(1)
+            );
+            console.log(newArr);
+            console.log(filmler);
+            //yukaridaki filmler arrayindeki H ile baslayan filmi bize veren kodu yaziniz
+        let hFilms= filmler.map((item) => {
+                if (item.startsWith("H")) {
+                    return item.toUpperCase();
+                } else {
+                    return item;
+                }
+            });
+            console.log(hFilms)
+        </script>
+    </body>
+</html>
