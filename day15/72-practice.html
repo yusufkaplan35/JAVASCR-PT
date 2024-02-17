@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/* Bir Firma, 3000 TL den az olan maaşlara %10 zam yapmak  istiyor
+ ve zam yapılan bu kişilere toplam kaç TL ödeneceğini bilmek istiyor.
+   İlgili programı yazınız.
+ */
+ const maaslar = [3000, 2891, 3500, 4200, 7000, 2500];
+
+let maasYuku=  maaslar.
+filter((maas)=>maas<3000)
+.map((zam)=>zam*1.10)
+.reduce((toplam,para)=>toplam+para,0).toFixed(2)
+
+console.log(maasYuku)
+
+    </script>
+</body>
+</html>

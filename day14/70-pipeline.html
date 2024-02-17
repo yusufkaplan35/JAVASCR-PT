@@ -27,18 +27,16 @@ console.log("-------------------------------------------------------------------
         { id: 6, name: "mouse", price: 5 },
         { id: 7, name: "monitor", price: 350 },
       ];
- 
-      let newProducts = products.
+ let newProducts = products.
       filter((product)=>product.price<500)
-      .map((item)=>({
-        name:item.name,
-        price:item.price*1.15}))
+      .map((item)=>
+   ( {
+    
+    name:item.name,
+    price:(item.price*1.15).toFixed(2)}))
      
       console.log(newProducts)
-
-
-
     </script>
-    
+      
 </body>
 </html>

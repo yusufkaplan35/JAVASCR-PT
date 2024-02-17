@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document Object model</title>
+    </head>
+    <body>
+        <h1>Document Object model</h1>
+        <p class="about">
+            -0000000000000000000000000000000- Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Amet, rerum? Inventore, iure harum.
+            Temporibus hic incidunt qui error rem accusantium suscipit unde
+            perferendis et assumenda. Numquam aspernatur repellendus minima
+            veritatis.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet,
+            rerum? Inventore, iure harum. Temporibus hic incidunt qui error rem
+            accusantium suscipit unde perferendis et assumenda. Numquam
+            aspernatur repellendus minima veritatis.
+        </p>
+        <p class="about">
+            -111111111111111111111111111111111111111111- -1 Lorem ipsum dolor
+            sit amet, consectetur adipisicing elit. Amet, rerum? Inventore, iure
+            harum. Temporibus hic incidunt qui error rem accusantium suscipit
+            unde perferendis et assumenda. Numquam aspernatur repellendus minima
+            veritatis.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet,
+            rerum? Inventore, iure harum. Temporibus hic incidunt qui error rem
+            accusantium suscipit unde perferendis et assumenda. Numquam
+            aspernatur repellendus minima veritatis.
+        </p>
+        <p id="textID">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet,
+            rerum? Inventore, iure harum. Temporibus hic incidunt qui error rem
+            accusantium suscipit unde perferendis et assumenda. Numquam
+            aspernatur repellendus minima veritatis.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet,
+            rerum? Inventore, iure harum. Temporibus hic incidunt qui error rem
+            accusantium suscipit unde perferendis et assumenda. Numquam
+            aspernatur repellendus minima veritatis.
+        </p>
+
+        <script>
+
+            //getElementById
+            const textEl = document.getElementById("textID");
+            console.log(textEl.innerText);
+
+            //getElementsByClassName
+            let aboutEl = document.getElementsByClassName("about");
+            console.log(aboutEl[1].innerText);
+
+            //getElementsByTagName
+          let h1El = document.getElementsByTagName("h1")
+          console.log(h1El[0].innerHTML)
+
+          //querySelectorAll
+        let listEl =  document.querySelectorAll(".about");
+        console.log(listEl)
+
+        listEl.forEach((item)=>{
+            console.log(item.innerText)
+        })
+        
+        </script>
+    </body>
+</html>

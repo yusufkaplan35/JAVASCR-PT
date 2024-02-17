@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reduce</title>
+</head>
+<body>
+<script>
+
+let numbers=[5,7,1];
+let totalNumbers=numbers.reduce((toplam,num)=> toplam+num,0)
+
+console.log(totalNumbers)
+
+console.log("---------------------------------------------------------------")
+
+const products = [
+        { id: 1, name: "laptop", price: 390 },
+        { id: 2, name: "mobile", price: 1000 },
+        { id: 3, name: "watch", price: 500 },
+        { id: 4, name: "tablet", price: 200 },
+        { id: 5, name: "charger", price: 500 },
+        { id: 6, name: "mouse", price: 5 },
+        { id: 7, name: "monitor", price: 350 },
+      ];
+
+   let totalPrice=   products.reduce((total,urun)=>total+urun.price,0);
+   console.log(`urunlerin toplam fiyati:  ${totalPrice}`);
+
+ //const productsNames=  products.reduce((accName,isim)=> ` ${accName} ${isim.name}`,"urun ismleri: ");
+
+ const productsNames=  products.reduce((accName,isim)=> accName+" "+isim.name,"urun ismleri: ");
+      
+console.log(productsNames);
+
+console.log("---------------------------------------------------------------");
+
+let sayilar=[3,6,9,1,4];
+ let maxNumber=sayilar.reduce((acc,sayi)=>{
+    return Math.max(acc,sayi);
+})
+console.log(maxNumber)
+
+/*     Koordinatlar dizisindeki değerlerin ortalamasını hesaplayarak 
+            konsola bastıran uygulamayı reduce() ile yazınız. */
+            
+            let koordinatlar = [-100, 150, -32, 43, -20];
+        let ortalama=  koordinatlar.reduce((toplam,koords)=> toplam+koords,0)
+ortalama=ortalama/koordinatlar.length
+
+console.log(ortalama)
+
+document.writeln(ortalama)
+
+
+</script>
+    
+</body>
+</html>
