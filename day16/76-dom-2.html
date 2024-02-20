@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document Object Model</title>
+        <style>
+            .renk-1 {
+                background-color: aqua;
+                color: crimson;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Document Object Model</h1>
+        <main>
+            <p class="about">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet
+                veritatis iusto ab ea aspernatur ad similique, distinctio alias
+                dignissimos consequuntur nobis unde magnam doloribus modi
+                pariatur omnis explicabo nam natus!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Deserunt sunt, unde reiciendis explicabo, porro similique illo
+                iste voluptate nam minima, incidunt voluptates quis corrupti in
+                laudantium dolorum! Asperiores, sit ducimus!
+            </p>
+            <ul class="list">
+                <li><a href="https://techproeducation.com/">Link-1</a></li>
+                <li><a href="#" id="linkPro">Link-Pro</a></li>
+                <li><a href="#">Link-3</a></li>
+                <li><a href="#">Link-4</a></li>
+            </ul>
+        </main>
+        <script>
+            document
+                .querySelector("#linkPro")
+                .addEventListener("click", (e) => {
+                    let clickPro = e.target;
+                    clickPro
+                        .closest("main")
+                        .querySelector("p")
+                        .classList.add("renk-1");
+                });
+                let listEl=document.querySelector(".list")
+                console.log(listEl.children[1])
+                console.log(listEl.firstElementChild)
+                console.log(listEl.lastElementChild)
+                console.log(listEl.parentElement)
+                let liEl=document.getElementById("linkPro");
+            
+                console.log(liEl.parentElement)
+                let selectEl=document.querySelector(".list li:nth-child(2)")
+                console.log(selectEl.nextElementSibling)
+                console.log(selectEl.previousElementSibling)
+/*
+                console.log(selectEl.childNodes)
+                console.log(listEl.childNodes)
+*/
+        </script>
+    </body>
+</html>

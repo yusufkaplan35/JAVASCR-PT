@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .red{
+                background-color: red;
+                color: rgb(189, 158, 189);
+            }
+            .blue{
+                background-color: rgb(0, 76, 255);
+                color: violet;
+            }
+            .green{
+                background-color: green;
+                color: violet;
+            }
+        </style>
+    </head>
+    <body>
+        <p class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
+            aspernatur, veritatis dolores qui, libero dolor optio, assumenda
+            ipsa voluptatem similique consectetur! Culpa soluta architecto,
+            corporis voluptatum amet exercitationem quaerat itaque?
+        </p>
+        <button id="btnAdd">Add</button>
+        <button id="btnRemove">Remove</button>
+        <button id="btnToggle">Toggle</button>
+        <button id="btnReplace">Replace</button>
+        <script>
+            let textEl = document.querySelector(".text");
+            document.getElementById("btnAdd").addEventListener("click",()=>{
+                textEl.classList.add("red")
+            })
+            document.getElementById("btnRemove").addEventListener("click",()=>{
+                textEl.classList.remove("red")
+            })
+            document.getElementById("btnToggle").addEventListener("click",()=>{
+                textEl.classList.toggle("blue")
+            })
+            
+            document.getElementById("btnReplace").addEventListener("click",()=>{
+                textEl.classList.replace("blue","green")
+            })
+        </script>
+    </body>
+</html>
