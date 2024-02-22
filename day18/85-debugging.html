@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Calculate</button>
+    <script>
+        const hesapla = (arr) => {
+            if (!Array.isArray(arr) || arr.length <= 0) {
+                return;
+            }
+            let pToplam = 0;
+            let nToplam = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] > 0) {
+                    pToplam += arr[i];
+                } else {
+                    nToplam += arr[i];
+                }
+            }
+            return pToplam + nToplam;
+        }
+        document.getElementById("btn").addEventListener("click", () => {
+            const rakamlar = [-5, 15, 22, -4, 45, 78, -25];
+            const sonuc = hesapla(rakamlar);
+            console.log(sonuc);
+        })
+    </script>
+</body>
+</html>

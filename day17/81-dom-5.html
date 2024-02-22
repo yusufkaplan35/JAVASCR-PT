@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document Object Model</title>
+    </head>
+    <body>
+        <input type="text" id="inpText" style="padding: 8px" />
+        <button id="btn" style="margin: 1rem; font-size: 18px">Button</button>
+        <ul class="list">
+            <li>Fenerbahce</li>
+        </ul>
+        <script>
+            document.querySelector("#btn").addEventListener("click", () => {
+                let inputEl = document.getElementById("inpText");
+                let listEl = document.querySelector(".list");
+                let inputValue = inputEl.value;
+                //console.log()
+                let newLi = document.createElement("li");
+                newLi.innerHTML = inputValue;
+                newLi.style.color = "red";
+                newLi.setAttribute("data-id", Math.floor (Math.random()*122233));
+                listEl.appendChild(newLi);
+                inputEl.value = "";
+                inputEl.focus();
+            });
+        </script>
+    </body>
+</html>

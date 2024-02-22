@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributes</title>
+    <style>
+        #tcNo{
+            margin: 1rem;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <input type="number" id="tcNo"  data-osman="" >
+    <button id="btnSubmit" disabled>Submit</button>
+    <!-- eger ki kendimiz bir attribute eklemek istersek bunun yontemi  
+    attributenin basina data- eklemekle mumkun olur.data ifadesi eklenince attribute brpwser bunun 
+bizim ozel bir attribute olusturdugumuzu anlar     -->
+    <script>
+  let butonEl= document.getElementById("btnSubmit");
+  document.getElementById("tcNo").addEventListener("input",(e)=>{
+ let tcNoINP= e.target.value;
+ if(tcNoINP.length==11){
+    butonEl.removeAttribute("disabled");
+   // butonEl.setAttribute("href","https://www.tc.gov.tr");
+    console.log("islem basarili")
+ }else{
+   // butonEl.setAttribute("disabled","disabled")
+    butonEl.setAttribute("disabled",true)
+    console.error("islem basarısız")
+ }
+  })
+    </script>
+</body>
+</html>
