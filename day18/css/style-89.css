@@ -1,0 +1,48 @@
+@font-face {
+    font-family: "digital";
+    src: url("../font/digital-7.ttf");
+}
+html, body{
+    height: 100%;
+}
+body {
+    font-family: "digital";
+    background-image: url("https://images.unsplash.com/photo-1673754472327-a0d3f5659fa3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin:0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;  
+}
+h2{
+    font-size: 2rem;
+    letter-spacing: 5px;
+}
+.clock{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap:5px;
+}
+.clock > div{
+    flex: 1 1 200px;
+}
+.clock h3{
+    background-color: rgba(222, 184, 135, 0.8);
+    text-align: center;
+    padding: 30px 10px;
+    font-size: 4rem;
+    font-weight: normal;
+    margin:0;
+}
+.clock h6{
+    font-weight: normal;
+    background-color: rgba(216, 161, 90, 0.8);
+    margin:0;
+    text-align: center;
+    padding: 5px;
+    font-size: 1.3rem;
+}

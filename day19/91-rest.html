@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest</title>
+</head>
+<body>
+    <script>
+        const sum1 = (a, b) => {
+            return a + b
+        }
+        console.log(sum1(34, 67))
+        console.log(sum1(34, 67, 11))
+        const sum2 = (...nums) => {
+            const total = nums.reduce((t, num) => t + num, 0);
+            return total;
+        }
+        console.log(sum2(34, 67))
+        console.log(sum2(34, 67, 11))
+        console.log(sum2(34, 67, 11, 234, 5456, 787, 45, 768, 34))
+    </script>
+</body>
+</html>
