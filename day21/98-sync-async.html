@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sync - Async</title>
+</head>
+<body>
+    <script>
+        /* 
+        Javascript te fonksiyon cagrilari CALL STACK ile yonetilir. 
+        Asenkron yapilardan gelen cevaplar (Callback) CALL STACK te an alta atilir
+        Eger birden fazla asenkron yapi varsa CALL STACK e ilk giren once calisir.
+        */
+        const getData1 = () => {
+            console.log("Data 1 is loading...")
+            setTimeout(() => {
+                console.log("Data 1 is received")
+            }, 502)
+            console.log("Process data 1")
+        }
+        const getData2 = () => {
+            console.log("Data 2 is loading...")
+            setTimeout(() => {
+                const data = "Data received from server"
+                console.log("Data 2 is received")
+                return data
+                // Asenkron yapilardan RETURN ile geriye veri dondurulemez
+                // Bunun icin CALLBACK yapilari kullanilir.
+            }, 501)
+            console.log("Process data 2")
+        }
+        console.log("Process 1")
+        getData1();
+        const data = getData2();
+        console.log(data);
+        console.log("Process 3")
+    </script>
+</body>
+</html>

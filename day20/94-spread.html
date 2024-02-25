@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread</title>
+</head>
+<body>
+    <script>
+        // ARRAYS 
+        let cars = ["Volvo", "Mercedes", "Tofas", "Mini", "Bugatti"]
+        console.log(cars)
+        cars = ["Fiat", "Jaguar", ...cars, "Togg", "Mercedes"];
+        console.log(cars)
+        // Dublicate datalari unique hale getirmek icin Set kullanilir.
+        // new Set() ifadesi kendisine parametre olarak verilen diziyi object haline getirir ve tekrar eden datalari unique yapar
+        // ... spread ile ise Set yapisi dagitilarak tekar diziye donus yapilir
+        cars = [...new Set(cars)]
+        console.log(cars)
+        // OBJECTS
+        // string, number, boolean, bigInt, ... value type variables
+        let x = 5;
+        let z = 45;
+        x = z; // x=45
+        x = 11;
+        console.log(x, z);
+        const bugatti = {
+            brand: "Bugatti",
+            model: "Veyron",
+            color: "red",
+            year: 2023
+        }
+        // array ve object tipindeki degiskenler ise reference type degiskenlerdir.
+        const bugatti2 = bugatti;
+        //console.log(bugatti, bugatti2)
+        bugatti2.color = "Yellow" // Nesnenin referansi degil degeri degistigi icin const buna kizmaz
+        //console.log(bugatti, bugatti2)
+        // Buraya hata verir cunku degiskenin referansi degistirilmeye calisiliyor. Buna const izin vermez
+        //bugatti2 = {brand: "Mercedes"}
+        const bugatti3 = { ...bugatti }
+        bugatti3.color = "Green"
+        
+        const bugatti4 = { ...bugatti3, motor: "V8", color: "blue" }
+        console.log(bugatti, bugatti2, bugatti3, bugatti4)
+    </script>
+</body>
+</html>

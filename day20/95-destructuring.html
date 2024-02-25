@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    <script>
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            country: "England",
+            department: "IT",
+            salary: 5000
+        }
+        /*      Klasik yontem
+                const getInfo = (personManager) => {
+                    return `${personManager.firstName} ${personManager.lastName} isimli calisanimiz ${personManager.country} da ikamet etmekte, ${personManager.department} departmaninda calismakta ve ${personManager.salary} kazanmaktadir`;
+                } */
+        // destructuring yontemi
+        const getInfo = (personManager) => {
+            const { firstName, lastName, country, department, salary } = personManager; // destructuring
+            return `${firstName} ${lastName} isimli calisanimiz ${country} da ikamet etmekte, ${department} departmaninda calismakta ve ${salary} kazanmaktadir`;
+        }
+        console.log(getInfo(person));
+        const sayHello = ({ firstName, lastName, country}) => {
+            console.log(`Hello ${firstName} ${lastName} ${country}`);
+        }
+        sayHello(person)
+    </script>
+</body>
+</html>

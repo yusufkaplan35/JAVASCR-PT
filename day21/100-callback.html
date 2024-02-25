@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+</head>
+<body>
+    <h1 id="distance">Loading...</h1>
+    <h1 id="price">Loading...</h1>
+    <script>
+        const getDistanceFromGoogle = (coordinate1, coordinate2, cbDistance) => {
+            setTimeout(() => {
+                // Burada Google sunucularina baglandigimizi kabul edelim
+                // Google a iki koordinat gonderiyoruz, o da bize iki koordinat arai mesafeyi hesaplayip gonderiyor
+                const distance = coordinate1 - coordinate2;
+                cbDistance(distance)
+            }, 3000)
+        }
+        const getPrice = (distance, cbPrice) => {
+            setTimeout(() => {
+                // Burada bir fiyat hesaplama servisine baglanioruz
+                // Bize geriye bir fiyat donuyor
+                const price = distance * 5
+                cbPrice(price)
+            }, 2000)
+        }
+        const cbDistance = (data) => {
+            getPrice(data, cbPrice)
+            document.getElementById("distance").textContent = `${data}km`
+        }
+        const cbPrice = (data) => {
+            document.getElementById("price").textContent = `€${data}`
+        }
+        getDistanceFromGoogle(500, 200, cbDistance)
+/* 
+        getDistanceFromGoogle(500, 200, (distance) => {
+            getPrice(distance, (price) => {
+                document.getElementById("price").textContent = `€${price}`
+            })
+            document.getElementById("distance").textContent = `${data}km`
+        })
+ */
+    </script>
+</body>
+</html>

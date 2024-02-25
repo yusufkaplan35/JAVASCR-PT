@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sync - Async</title>
+</head>
+<body>
+    <script>
+        // Javascript normalde senkron calisirken setTimeout fonksiyonunu gorunce asenkron yapiya gecer
+        // ve suresi gelen callback fonksiyonu call stack in en altina atip calistirir.
+        
+        setTimeout(() => {
+            console.log(`Hello from the async function 1`)
+        }, 600)
+        console.log("1.Hello before the foor loop");
+        for (let i = 0; i < 15; i++) {
+            console.log(`${i + 2} Hello from the for loop`)
+        }
+        console.log(`17.Hello after the for loop`)
+        setTimeout(() => {
+            console.log(`Hello from the async function 2`)
+        }, 501)
+        const f1 = () => {
+            f2();
+            
+        }
+        const f2 = () => {
+            f3();
+        }
+        const f3 = () => {
+        }
+        f1();
+        
+    </script>
+</body>
+</html>

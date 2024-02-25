@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Back</title>
+</head>
+<body>
+    <script>
+        /* 
+        Javascript te fonksiyon cagrilari CALL STACK ile yonetilir. 
+        Asenkron yapilardan gelen cevaplar (Callback) CALL STACK te an alta atilir
+        Eger birden fazla asenkron yapi varsa CALL STACK e ilk giren once calisir.
+        */
+        const getData = (cb) => {
+            console.log("Data is loading...")
+            setTimeout(() => {
+                const data = "Data received from server"
+                cb(data)
+            }, 501)
+            console.log("Process data")
+        }
+         const cb = (data) => {
+            console.log(data)
+        } 
+        console.log("Process 1")
+        getData(cb);
+        console.log("Process 3")
+    </script>
+</body>
+</html>
