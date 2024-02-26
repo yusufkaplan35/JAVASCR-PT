@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <button id="btn">Delete</button>
+    <script>
+        // Asenkron olmayan bir kod blogunun promise ile asenkron hale getirilmesi
+        const confirmAsync = (msg) => {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    const result = confirm(msg)
+                    resolve(result)
+                }, 0)
+            })
+        }
+        document.getElementById("btn").addEventListener("click", () => {
+            confirmAsync("Are you sure to delete?").then((result) => {
+                if (result) {
+                    console.log("Deleted");
+                }
+            });
+            console.log("Another process")
+        })
+    </script>
+</body>
+</html>

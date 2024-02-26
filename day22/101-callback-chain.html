@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Chain</title>
+</head>
+<body>
+    <script>
+
+        const siparisVer = (talep, cb) => {
+            console.log(`${talep} siparisi alindi`);
+            setTimeout(() => {
+                const siparis = talep;
+                cb(siparis)
+            }, 3000)
+        }
+
+        const yemekYe = (yemek, cb) => {
+            console.log(`${yemek} yemege baslandi`);
+            setTimeout(() => {
+                cb()
+            }, 4000)
+        }
+
+        const filmIzle = (cb) => {
+            console.log(`Film basladi`);
+            setTimeout(() => {
+                cb()
+            }, 6000)
+        }
+        
+        siparisVer("Pide", (siparis)=>{
+            console.log(`${siparis} hazir`)
+            yemekYe(siparis, ()=>{
+                console.log(`${siparis} yendi bitti`)
+                filmIzle(()=>{
+                    console.log(`Film bitti`)
+                });
+                yemekYe("Patlak misir", ()=>{
+                    console.log(`Patlak misir bitti`)
+                })
+            });
+        });
+        
+        
+       
+    </script>
+</body>
+</html>

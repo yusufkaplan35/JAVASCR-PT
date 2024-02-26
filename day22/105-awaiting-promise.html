@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Chain</title>
+</head>
+<body>
+    <script>
+        const siparisVer = (talep) => {
+            return new Promise((resolve) => {
+                console.log(`${talep} siparisi alindi`);
+                setTimeout(() => {
+                    const siparis = talep;
+                    resolve(siparis)
+                }, 3000)
+            })
+        }
+        const yemekYe = (yemek) => {
+            return new Promise((resolve) => {
+                console.log(`${yemek} yemege baslandi`);
+                setTimeout(() => {
+                    resolve(yemek)
+                }, 4000)
+            })
+        }
+        const filmIzle = () => {
+            return new Promise((resolve) => {
+                console.log(`Film basladi`);
+                setTimeout(() => {
+                    resolve()
+                }, 6000)
+            })
+        }
+        const init = async () => {
+            const siparis = await siparisVer("Pide")
+            console.log(`${siparis} hazir`)
+            const yemek = await yemekYe(siparis)
+            console.log(`${yemek} yendi bitti`)
+            filmIzle().then(() => {
+                console.log(`Film bitti`)
+            });
+            yemekYe("Patlak misir").then(() => {
+                console.log(`Misir bitti`)
+            });;
+        }
+        init();
+        /*  siparisVer("Pide")
+             .then((siparis) => {
+                 console.log(`${siparis} hazir`)
+                 return yemekYe(siparis)
+             })
+             .then((yemek) => {
+                 console.log(`${yemek} yendi bitti`)
+                 yemekYe("Patlak misir").then(() => {
+                     console.log(`Patlak misir bitti`)
+                 })
+                 return filmIzle()
+             })
+             .then(() => {
+                 console.log(`Film bitti`)
+             })
+ 
+  */
+    </script>
+</body>
+</html>
